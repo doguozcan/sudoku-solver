@@ -140,6 +140,13 @@ class SudokuSolver {
     let emptyBox = this.findEmpty(puzzleString)
 
     if (!emptyBox) {
+      if (
+        puzzleString.split('').filter((character) => /[^0-9.]/.test(character))
+          .length !== 0 ||
+        puzzleString.length !== 81
+      ) {
+        return false
+      }
       return puzzleString
     }
 

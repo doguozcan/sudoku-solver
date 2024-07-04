@@ -41,7 +41,7 @@ app.listen(PORT, function () {
     console.log('Running Tests...')
     setTimeout(function () {
       try {
-        // runner.run();
+        runner.run()
       } catch (error) {
         console.log('Tests are not valid:')
         console.error(error)
