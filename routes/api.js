@@ -31,7 +31,7 @@ module.exports = function (app) {
     let [row, column] = coordinate.split('')
 
     // if the value is not in the range 1 to 9
-    if (!'123456789'.includes(value)) {
+    if (!/^[1-9]$/.test(value)) {
       return res.json({ error: 'Invalid value' })
     }
 
